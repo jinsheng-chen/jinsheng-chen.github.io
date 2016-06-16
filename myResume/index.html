@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>html5前端工程师的简历-陈金生的个人网站</title>
+    <meta name="keywords" content="陈金生,html5前端工程师,html5前端工程师简历,陈金生简历">
+	<meta name="description" content="陈金生，男，江西赣州人，90后html5前端工程师。网站作为本人简历使用，任何人未经许可不得以商业目的发布和使用，想了解更多关于我的信息欢迎进入我的网站。">
+    <link rel="stylesheet" href="css/reset.css" />
+    <style>
+        html, body { width: 100%; height: 100%; }
+        body { background: url("images/index/light.jpg") no-repeat center; background-size: cover; }
+        #box { height: 140px; width: 516px; margin: auto; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: url("images/index/bg.png") no-repeat center; }
+        .text { width: 100%; font: 18px/1 '微软雅黑,黑体'; color: #00b7ee; text-align: center; position: absolute; top: -100px; }
+        #audio { width: 83px; height: 24px; background: url("images/icons/audio.png"); position: absolute; top: -24px;
+            left: 50%; margin-left: -41px; z-index: 10; }
+        #audio div { width: 51px; height: 24px; background: url("images/icons/button.png"); -webkit-transform: translate(32px); transform: translate(32px); transition: all .2s; }
+        .dark, #light { height: 140px; width: 516px; }
+        .dark div, #light div { float: left; transition: opacity .1s linear; }
+        .dark div:nth-of-type(1), #light div:nth-of-type(1) { width: 220px; height: 107px; padding-top: 25px; margin-left: 7px; }
+        .dark div:nth-of-type(2), #light div:nth-of-type(2) { width: 63px; height: 65px; padding-top: 34px; }
+        .dark div:nth-of-type(3), #light div:nth-of-type(3) { width: 220px; height: 107px; padding-top: 25px; }
+        .dark div:nth-of-type(1) { background: url("images/index/xuanku.png") no-repeat left bottom; }
+        .dark div:nth-of-type(2) { background: url("images/index/six.png") no-repeat left bottom; }
+        .dark div:nth-of-type(3) { background: url("images/index/wenzi.png") no-repeat right bottom; }
+        #light div:nth-of-type(1) { background: url("images/index/xuanku2.png") no-repeat left bottom; }
+        #light div:nth-of-type(2) { background: url("images/index/six2.png") no-repeat left bottom; }
+        #light div:nth-of-type(3) { background: url("images/index/wenzi2.png") no-repeat right bottom; }
+        #light { position: absolute; top: 0; }
+        #light div { opacity: 0; }
+
+        #prompt { text-align: center; height: 450px; width: 440px; position: absolute; margin: auto; top: 0; left: 0; bottom: 0; right: 0; display: none; }
+        #prompt h3 { color: #fff; font: 14px/1 '微软雅黑,黑体'; }
+        .out { color: #00b7ee; font: 18px/28px '微软雅黑,黑体'; }
+        .out span { display: inline-block; -webkit-transform: rotate(20deg); transform: rotate(20deg); color: #fff;
+            font-size: 24px; }
+        .not { color: #00b7ee; font: 14px/28px '微软雅黑,黑体'; }
+        .cry { color: #fff; font: 30px/70px '微软雅黑,黑体'; height: 70px; }
+        .itemBox { width: 424px; height: 284px; margin: 10px auto; background: url("images/index/bg2.png") no-repeat
+        center; padding-top: 5px; text-align: center; }
+        .suggest { height: 34px; font: 14px/34px '微软雅黑,黑体'; color: #fff; }
+        .word { width: 163px; height: 30px; background: url("images/index/word.png") no-repeat center bottom; margin: 0
+        auto
+        27px; }
+        .word:hover { background-position: center top; }
+        .or { color: #00b7ee; margin-bottom: 11px; font: 14px/1 '微软雅黑,黑体'; }
+        .logBox { width: 342px; overflow: hidden; margin: 0 auto 14px; }
+        .logBox li { width: 114px; float: left; }
+        .logBox img { width: 64px; height: 64px; margin: 0 25px; }
+        .logBox h4 { font: 22px/36px '微软雅黑,黑体'; color: #fff; }
+        .logBox p { font: 14px/1 '微软雅黑,黑体'; color: #fff; }
+        .keep { font: 14px/1 '微软雅黑,黑体'; color: #00b7ee; }
+
+    </style>
+    <script src="js/json.js" ></script>
+</head>
+<body oncontextmenu=self.event.returnValue=false>
+	<audio src="audio/tai.mp3" autoplay="autoplay" hidden="hidden" id="BGsound"></audio>
+    <div id="box">
+        <div class="text"></div>
+        <div id="audio" >
+            <div>
+                <img src="images/icons/bofang.png"  alt=""/>
+            </div>
+        </div>
+        <div class="dark">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="light">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div id="prompt">
+        <h3></h3>
+        <p class="out">检测到你的浏览器太 <span>OUT</span> 了</p>
+        <p class="not">导致许多浏览器新特性无法识别，因此“炫酷版”个人简历你无法预览</p>
+        <p class="cry">(>﹏<)</p>
+        <div class="itemBox">
+            <p class="suggest">推荐访问</p>
+            <div class="word" id="word"></div>
+            <p class="or">或者下载</p>
+            <ul class="logBox">
+                <li>
+                    <img src="images/index/chrome.png"  alt=""/>
+                    <h4>chrome</h4>
+                    <p>谷歌浏览器</p>
+                </li>
+                <li>
+                    <img src="images/index/fox.png"  alt=""/>
+                    <h4>Firefox</h4>
+                    <p>火狐浏览器</p>
+                </li>
+                <li>
+                    <img src="images/index/safari.png"  alt=""/>
+                    <h4>Safari</h4>
+                    <p>苹果浏览器</p>
+                </li>
+            </ul>
+            <p class="keep">后再继续访问该网页</p>
+        </div>
+    </div>
+    <script>
+		var BGsound=document.getElementById("BGsound");
+        var oTitle = document.getElementsByTagName('title')[0];
+        var light = document.getElementById('light');
+        var aDiv2 = light.getElementsByTagName('div');
+
+        var oAudio = document.getElementById('audio');
+        var button = oAudio.getElementsByTagName('div')[0];
+        var oImg = button.getElementsByTagName('img')[0];
+        var bOff = false;
+
+        var box = document.getElementById('box');
+        var prompt = document.getElementById('prompt');
+
+        var word = document.getElementById('word');
+
+        var oDiv = box.getElementsByTagName('div')[0];
+        var oH3 = prompt.getElementsByTagName('h3')[0];
+
+        oTitle.innerHTML = Json.myInfo.name + '的个人简历';
+        oDiv.innerHTML = oH3.innerHTML = '&lt; ' + Json.myInfo.name + '的个人简历 &gt;';
+
+        var explorer = window.navigator.userAgent.toUpperCase();
+        if(explorer.indexOf("MSIE")!=-1||explorer.indexOf("TRIDENT")!=-1){
+
+            box.style.display = 'none';
+            prompt.style.display = 'block';
+
+        }
+
+        aDiv2[0].onmouseover = function(){
+
+            this.style.opacity = 1;
+            aDiv2[1].style.opacity = 1;
+
+        };
+        aDiv2[0].onmouseout = function(){
+
+            this.style.opacity = 0;
+            aDiv2[1].style.opacity = 0;
+
+        };
+        aDiv2[2].onmouseover = function(){
+
+            this.style.opacity = 1;
+            aDiv2[1].style.opacity = 1;
+
+        };
+        aDiv2[2].onmouseout = function(){
+
+            this.style.opacity = 0;
+            aDiv2[1].style.opacity = 0;
+
+        };
+
+        oAudio.bOff = false;
+        oAudio.onclick = sound;
+        function sound(){
+
+            oAudio.bOff = !oAudio.bOff;
+            if(oAudio.bOff){
+
+                button.style.webkitTransform = 'translate(0)';
+                button.style.transform = 'translate(0)';
+                oImg.src = 'images/icons/jingyin.png';
+                BGsound.pause();
+
+            }else{
+
+                button.style.webkitTransform = 'translate(32px)';
+                button.style.transform = 'translate(32px)';
+                oImg.src = 'images/icons/bofang.png';
+				BGsound.play();
+            }
+
+        }
+
+        aDiv2[0].onclick = function(){
+
+            window.location.href = 'cool.html#audio='+!oAudio.bOff;
+
+        };
+        aDiv2[2].onclick = function(){
+
+            window.location.href = 'simple.html';
+
+        };
+        word.onclick = function(){
+
+            window.location.href = 'simple.html';
+
+        };
+
+    </script>
+</body>
+</html>
