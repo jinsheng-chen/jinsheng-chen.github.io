@@ -25,7 +25,7 @@ var Json = {
 
         },
         {
-            name:'一元夺宝',  //项目名称
+            name:'云购一元夺宝',  //项目名称
             date:'17周', //项目时间
             detail:'一元夺宝微商城是移动端的微信商城，通过低价吸引用户进行夺宝购买的欲望，是一个典型的移动端商城，该项目为团队开发项目', //项目介绍
             image:['images/photo/4/1.png','images/photo/4/2.png','images/photo/4/3.png','images/photo/4/2.png'], //项目图片地址
@@ -58,11 +58,11 @@ var Json = {
         city:'深圳', //所在城市 
         phone:'18270723799', //电话
         mail:'18270723799@163.com',  //邮箱
-        work:'Html5前端工程师，全职，深圳，16K', //期望职位 工作性质 期望工作地点 期望薪资
+        work:'Html5前端工程师，全职，深圳，面议', //期望职位 工作性质 期望工作地点 期望薪资
         work1:'Html5前端工程师', //期望职位
         nature:'全职',  //工作性质
         hopeCity:'深圳',  //期望工作地点
-        money:'14K',  //期望薪资
+        money:'面议',  //期望薪资
         head:'images/photo/user.jpg',  //头像
         ps:'无'  //备注
     }
